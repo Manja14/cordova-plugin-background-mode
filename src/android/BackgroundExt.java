@@ -158,9 +158,9 @@ class BackgroundExt {
 
         // app.startActivity(intent);
 
-        Intent notificationIntent = new Intent(getActivity(), getActivity().getClass());
+        Intent notificationIntent = new Intent(getApp(), getApp().getClass());
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, notificationIntent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApp(), 0, notificationIntent, 0);
         try 
         {
             pendingIntent.send();
